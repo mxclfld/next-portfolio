@@ -12,7 +12,7 @@ export default function Home() {
   const { setToDefault, setToText, setToLink, setToSkills } = useCursor();
 
   return (
-    <main className="flex flex-col justify-center text-primary">
+    <main className="flex flex-col justify-center mx-12 xl:mx-auto max-w-7xl text-primary">
       <section className="flex flex-col justify-center min-h-[95vh] lg:gap-4 w-full">
         <div className="flex flex-col flex-initial gap-12 lg:gap-8 xl:gap-12 2xl:gap-20 lg:flex-row lg:justify-between lg:items-center">
           <div className="flex-1 gap-2">

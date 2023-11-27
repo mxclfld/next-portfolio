@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={cn(
-          "mx-12 xl:mx-auto max-w-7xl flex flex-col min-h-screen bg-background font-mono grainy"
+          "flex flex-col min-h-screen bg-background font-mono grainy"
         )}
       >
         <Providers>
