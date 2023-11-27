@@ -42,32 +42,32 @@ export const skills: SkillsType[] = [
       {
         label: "TypeScript",
         icon: SiTypescript,
-        color: "text-blue-500",
+        color: "blue-500",
       },
       {
         label: "JavaScript",
         icon: FaJs,
-        color: "text-primary",
+        color: "primary",
       },
       {
         label: "HTML5",
         icon: FaHtml5,
-        color: "text-red-600"
+        color: "red-600",
       },
       {
         label: "CSS",
         icon: FaCss3,
-        color: "text-blue-500",
+        color: "blue-500",
       },
       {
         label: "React",
         icon: FaReact,
-        color: "text-blue-500",
+        color: "blue-500",
       },
       {
         label: "Next.js",
         icon: SiNextdotjs,
-        color: "text-slate-800",
+        color: "slate-800",
       },
     ],
   },
@@ -77,12 +77,12 @@ export const skills: SkillsType[] = [
       {
         label: "Express.js",
         icon: SiExpress,
-        color: "text-green-400",
+        color: "green-400",
       },
       {
         label: "Node.js",
         icon: SiNodedotjs,
-        color: "text-green-600",
+        color: "green-600",
       },
     ],
   },
@@ -92,17 +92,17 @@ export const skills: SkillsType[] = [
       {
         label: "Material UI",
         icon: SiMui,
-        color: "text-blue-500",
+        color: "blue-500",
       },
       {
         label: "Tailwind CSS",
         icon: SiTailwindcss,
-        color: "text-blue-500",
+        color: "blue-500",
       },
       {
         label: "Ant Design",
         icon: SiAntdesign,
-        color: "text-red-600",
+        color: "red-600",
       },
     ],
   },
@@ -112,12 +112,12 @@ export const skills: SkillsType[] = [
       {
         label: "MongoDB",
         icon: SiMongodb,
-        color: "text-green-400",
+        color: "green-400",
       },
       {
         label: "PostgreSQL",
         icon: SiPostgresql,
-        color: "text-blue-500",
+        color: "blue-500",
       },
     ],
   },
@@ -127,34 +127,38 @@ export const skills: SkillsType[] = [
       {
         label: "Jest",
         icon: SiJest,
+        color: "red-700",
       },
       {
         label: "Git",
         icon: SiGit,
+        color: "red-600",
       },
       {
         label: "GitHub",
         icon: FaGithub,
-        color: 'text-white'
+        color: "white",
       },
       {
         label: "GitLab",
         icon: FaGitlab,
+        color: "orange-500",
       },
       {
         label: "Visual Studio Code",
         icon: SiVisualstudiocode,
-        color: 'text-blue-500'
+        color: "blue-500",
       },
 
       {
         label: "ESLint",
         icon: SiEslint,
+        color: "purple-600",
       },
       {
         label: "Docker",
         icon: FaDocker,
-        color: 'text-blue-500'
+        color: "blue-500",
       },
     ],
   },

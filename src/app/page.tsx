@@ -84,8 +84,13 @@ export default function Home() {
                   </div>
                   <div className="flex flex-row flex-wrap gap-1">
                     {category.skillsList.map((skill) => (
-                      <div key={skill.label} className={cn("text-3xl")}>
-                        <skill.icon />
+                      <div key={skill.label} className="text-3xl">
+                        <div
+                          className={`mt-1 px-2 py-1 text-sm bg-primary/30 text-primary`}
+                        >
+                          {skill.label}
+                        </div>
+                        {/* <skill.icon color={skill.color} /> */}
                       </div>
                     ))}
                   </div>
