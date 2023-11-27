@@ -9,7 +9,7 @@ import { skills } from "@/lib/skills";
 import { socials } from "@/lib/socials";
 
 export default function Home() {
-  const { setToDefault, setToText, setToLink } = useCursor();
+  const { setToDefault, setToText, setToLink, setToSkills } = useCursor();
 
   return (
     <main className="flex flex-col justify-center text-primary">
@@ -74,15 +74,25 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-2">
-            <p>My skills</p>
+            <p onMouseEnter={setToSkills} onMouseLeave={setToDefault}>
+              My skills
+            </p>
 
             <div className="flex flex-col gap-3">
               {skills.map((category) => (
                 <div key={category.label} className="flex flex-col gap-1">
-                  <div className="border-l border-primary">
+                  <div
+                    className="border-l border-primary w-fit"
+                    onMouseEnter={setToSkills}
+                    onMouseLeave={setToDefault}
+                  >
                     <p className="pl-2 font-bold">{category.label}</p>
                   </div>
-                  <div className="flex flex-row flex-wrap gap-1">
+                  <div
+                    className="flex flex-row flex-wrap gap-1 w-fit"
+                    onMouseEnter={setToSkills}
+                    onMouseLeave={setToDefault}
+                  >
                     {category.skillsList.map((skill) => (
                       <div key={skill.label} className="text-3xl">
                         <div

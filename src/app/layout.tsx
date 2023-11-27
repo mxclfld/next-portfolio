@@ -29,7 +29,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
-          {/* <Cursor /> */}
+          <Cursor />
         </Providers>
       </body>
     </html>

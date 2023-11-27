@@ -9,15 +9,22 @@ import React, {
   useState,
 } from "react";
 
-export type CursorType = "default" | "text" | "link";
+export const CURSOR_TYPE_MAP = {
+  DEFAULT: "default",
+  TEXT: "text",
+  LINK: "link",
+  SKILLS: "skills",
+} as const;
+
+export type CursorType = typeof CURSOR_TYPE_MAP[keyof typeof CURSOR_TYPE_MAP];
 
 interface ContextProps {
   cursorVariant: CursorType;
-  cursorText: string;
 
   setToDefault: () => void;
   setToText: () => void;
   setToLink: () => void;
+  setToSkills: () => void;
 }
 
 interface CursorProviderProps {
@@ -30,42 +37,34 @@ const _noop = async () => {
 
 const Context = createContext<ContextProps>({
   cursorVariant: "default",
-  cursorText: "",
 
   setToDefault: _noop,
   setToText: _noop,
   setToLink: _noop,
+  setToSkills: _noop,
 });
 
 export const CursorProvider: FC<CursorProviderProps> = ({ children }) => {
   const [cursorVariant, setCursorVariant] = useState<CursorType>("default");
-  const [cursorText, setCursorText] = useState<string>("");
 
-  const setToDefault = () => {
-    setCursorVariant("default");
-    setCursorText("");
-  };
+  const setToDefault = () => setCursorVariant("default");
 
-  const setToText = () => {
-    setCursorVariant("text");
-    setCursorText("");
-  };
+  const setToText = () => setCursorVariant("text");
 
-  const setToLink = () => {
-    setCursorVariant("link");
-    setCursorText("Click!");
-  };
+  const setToLink = () => setCursorVariant("link");
+
+  const setToSkills = () => setCursorVariant("skills");
 
   const value = useMemo(
     () => ({
       cursorVariant,
-      cursorText,
 
       setToDefault,
       setToText,
       setToLink,
+      setToSkills,
     }),
-    [cursorVariant, cursorText]
+    [cursorVariant]
   );
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

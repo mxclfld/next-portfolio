@@ -2,7 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { CursorType, useCursor } from "@/context/CursorProvider";
+import {
+  CURSOR_TYPE_MAP,
+  CursorType,
+  useCursor,
+} from "@/context/CursorProvider";
 import cn from "@/lib/cn";
 
 type Point = { x: number; y: number };
@@ -12,11 +16,12 @@ const SIZE_MAP: SizeMapType = {
   default: 32,
   text: 128,
   link: 64,
+  skills: 128,
 };
 
 export default function Cursor() {
   const [mousePosition, setMousePosition] = useState<Point>({ x: 0, y: 0 });
-  const { cursorVariant, cursorText } = useCursor();
+  const { cursorVariant } = useCursor();
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -38,6 +43,12 @@ export default function Cursor() {
       width: SIZE_MAP.link,
       x: mousePosition.x - SIZE_MAP.link / 2,
       y: mousePosition.y - SIZE_MAP.link / 2,
+    },
+    skills: {
+      height: SIZE_MAP.skills,
+      width: SIZE_MAP.skills,
+      x: mousePosition.x - SIZE_MAP.skills / 2,
+      y: mousePosition.y - SIZE_MAP.skills / 2,
     },
   };
 
@@ -65,7 +76,8 @@ export default function Cursor() {
     <motion.div
       className={cn(
         "bg-primary mix-blend-difference fixed top-0 left-0 rounded-full pointer-events-none flex justify-center items-center",
-        !isVisible && "hidden"
+        !isVisible && "hidden",
+        cursorVariant === CURSOR_TYPE_MAP.SKILLS && "bg-white"
       )}
       variants={variants}
       animate={cursorVariant}
