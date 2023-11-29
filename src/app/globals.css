@@ -52,3 +52,22 @@
 * {
   cursor: none;
 }
+
+.hero::before, .hero::after {
+  content: url('../../public/dots.svg');
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero::before {
+  width: 200px;
+  top: 10%;
+  right: 0;
+}
+
+.hero::after {
+  width: 150px;
+  bottom: 10%;
+  left: -60px;
+}

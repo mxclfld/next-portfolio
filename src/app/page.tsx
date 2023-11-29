@@ -1,10 +1,10 @@
 "use client";
 
+import { Typewriter } from "react-simple-typewriter";
 import { useCursor } from "@/context/CursorProvider";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Typewriter } from "react-simple-typewriter";
-import cn from "@/lib/cn";
+
 import { skills } from "@/lib/skills";
 import { socials } from "@/lib/socials";
 
@@ -12,8 +12,13 @@ export default function Home() {
   const { setToDefault, setToText, setToLink, setToSkills } = useCursor();
 
   return (
-    <main className="flex flex-col justify-center mx-12 xl:mx-auto max-w-7xl text-primary">
-      <section className="flex flex-col justify-center min-h-[95vh] lg:gap-4 w-full">
+    <main className="flex flex-col justify-center mx-12 xl:mx-auto max-w-7xl text-primary overflow-hidden">
+      <div className='hidden hero lg:block' />
+      <motion.section
+        className="flex flex-col justify-center min-h-[95vh] lg:gap-4 w-full relative"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <div className="flex flex-col flex-initial gap-12 lg:gap-8 xl:gap-12 2xl:gap-20 lg:flex-row lg:justify-between lg:items-center">
           <div className="flex-1 gap-2">
             <p
@@ -94,13 +99,12 @@ export default function Home() {
                     onMouseLeave={setToDefault}
                   >
                     {category.skillsList.map((skill) => (
-                      <div key={skill.label} className="text-3xl">
+                      <div key={skill} className="text-3xl">
                         <div
                           className={`mt-1 px-2 py-1 text-sm bg-primary/30 text-primary`}
                         >
-                          {skill.label}
+                          {skill}
                         </div>
-                        {/* <skill.icon color={skill.color} /> */}
                       </div>
                     ))}
                   </div>
@@ -109,7 +113,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }
