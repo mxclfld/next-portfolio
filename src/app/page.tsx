@@ -12,7 +12,7 @@ export default function Home() {
   const { setToDefault, setToText, setToLink, setToSkills } = useCursor();
 
   return (
-    <main className="flex flex-col justify-center mx-12 xl:mx-auto max-w-7xl text-primary overflow-hidden">
+    <main className="mt-20 sm:mt-0 flex flex-col justify-center mx-12 xl:mx-auto max-w-7xl text-primary overflow-hidden">
       <div className='hidden hero lg:block' />
       <motion.section
         className="flex flex-col justify-center min-h-[95vh] lg:gap-4 w-full relative"
