@@ -75,7 +75,7 @@ export default function Cursor() {
   return (
     <motion.div
       className={cn(
-        "bg-primary mix-blend-difference fixed top-0 left-0 rounded-full pointer-events-none flex justify-center items-center",
+        "bg-primary mix-blend-difference fixed top-0 left-0 rounded-full pointer-events-none flex justify-center items-center z-50",
         !isVisible && "hidden",
         cursorVariant === CURSOR_TYPE_MAP.SKILLS && "bg-white"
       )}

@@ -55,6 +55,7 @@
 
 .hero::before, .hero::after {
   content: url('../../public/dots.svg');
+  fill: var(--primary);
   position: absolute;
   z-index: -1;
   overflow: hidden;
