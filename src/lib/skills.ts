@@ -16,7 +16,7 @@ export const skills: SkillsType[] = [
     ],
   },
   {
-    label: "Back end",
+    label: "Back End",
     skillsList: ["Express.js", "Node.js", "Nest.js"],
   },
   {
@@ -25,7 +25,7 @@ export const skills: SkillsType[] = [
   },
   {
     label: "Databases",
-    skillsList: ["MongoDB", "PostgreSQL"],
+    skillsList: ["MongoDB", "PostgreSQL", "MySQL"],
   },
   {
     label: "Other Tools",
@@ -34,7 +34,7 @@ export const skills: SkillsType[] = [
       "Git",
       "GitHub",
       "GitLab",
-      "Visual Studio Code",
+      "Postman",
       "ESLint",
       "Docker",
     ],

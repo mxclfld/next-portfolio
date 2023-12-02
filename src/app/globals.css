@@ -72,3 +72,12 @@
   bottom: 10%;
   left: -60px;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
