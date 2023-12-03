@@ -22,7 +22,7 @@ export default function Introduction() {
         Diana Kosovan
       </p>
       <div
-        className="text-xl md:text-3xl lg:text-5xl text-secondary bg-primary w-fit px-1"
+        className="text-xl md:text-3xl lg:text-5xl text-secondary bg-primary w-fit p-1"
         onMouseEnter={setToText}
         onMouseLeave={setToDefault}
       >

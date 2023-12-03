@@ -8,7 +8,7 @@ export default function Skills() {
 
   return (
     <div className="flex-1 flex flex-col gap-2">
-      <p onMouseEnter={setToSkills} onMouseLeave={setToDefault}>
+      <p className="font-bold" onMouseEnter={setToSkills} onMouseLeave={setToDefault}>
         My skills
       </p>
 

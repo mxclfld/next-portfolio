@@ -50,7 +50,16 @@
 }
 
 * {
-  cursor: none;
+  /* cursor: none; */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .hero::before, .hero::after {
@@ -73,11 +82,9 @@
   left: -60px;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.blob::before {
+  content: url('../../public/blob.svg');
+  fill: var(--primary);
+  position: absolute;
+  z-index: -1;
 }
