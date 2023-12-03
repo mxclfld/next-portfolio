@@ -1,6 +1,13 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IconType } from "react-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export const socials = [
+type SocialsType = {
+  icon: IconType;
+  link: string;
+  label: string;
+};
+
+export const socials: SocialsType[] = [
   {
     icon: FaGithub,
     link: "https://github.com/mxclfld",

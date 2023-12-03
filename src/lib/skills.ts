@@ -37,6 +37,8 @@ export const skills: SkillsType[] = [
       "Postman",
       "ESLint",
       "Docker",
+      "yup",
+      "zod",
     ],
   },
 ];

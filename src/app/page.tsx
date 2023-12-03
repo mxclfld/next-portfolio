@@ -1,4 +1,5 @@
 import Background from '@/components/Background';
+import Experience from '@/components/Experience';
 import HeroSection from '@/components/HeroSection';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <div className='hidden lg:block w-32 h-16 border-2 border-primary absolute bottom-32 right-20'/>
       <HeroSection />
       <Background />
+      <Experience />
     </main>
   );
 }
