@@ -57,12 +57,9 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-html, body {
+body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 .hero::before, .hero::after {

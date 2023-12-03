@@ -20,9 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
+      </head>
       <body
         className={cn(
-          "flex flex-col min-h-screen bg-background grainy", roboto.className
+          "flex flex-col min-h-screen bg-background grainy",
+          roboto.className
         )}
       >
         <Providers>
