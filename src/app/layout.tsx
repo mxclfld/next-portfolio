@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
       </head>
       <body
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Providers>
           <Navbar />
-          <div className="overflow-x-hidden">{children}</div>
+          <div className="overflow-x-hidden relative">{children}</div>
           {/* <Cursor /> */}
         </Providers>
       </body>
