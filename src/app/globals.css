@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow: hidden;
 }
 
 .hero::before, .hero::after {
