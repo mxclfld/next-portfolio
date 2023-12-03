@@ -7,7 +7,7 @@ import WorkHistory from './WorkHistory';
 export default function Experience() {
   return (
     <motion.section
-      className="mt-40 sm:mt-0 flex flex-col justify-center min-h-screen lg:gap-4 w-full"
+      className="mt-40 mb-20 sm:mb-0 sm:mt-0 flex flex-col justify-center min-h-screen lg:gap-4 w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.05 }}
