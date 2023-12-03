@@ -25,7 +25,7 @@ export const skills: SkillsType[] = [
   },
   {
     label: "Databases",
-    skillsList: ["MongoDB", "PostgreSQL", "MySQL"],
+    skillsList: ["MongoDB", "PostgreSQL", "MySQL", "Prisma", "TypeORM"],
   },
   {
     label: "Other Tools",
@@ -37,6 +37,8 @@ export const skills: SkillsType[] = [
       "Postman",
       "ESLint",
       "Docker",
+      "CI/CD",
+      "Vercel",
       "yup",
       "zod",
     ],
