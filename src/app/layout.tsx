@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Providers>
           <Navbar />
-          {children}
+          <div className="overflow-x-hidden fixed">{children}</div>
           {/* <Cursor /> */}
         </Providers>
       </body>
