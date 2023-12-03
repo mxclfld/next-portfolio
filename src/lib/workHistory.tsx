@@ -41,11 +41,11 @@ export const workHistory: WorkHistoryType[] = [
       "React Router",
       "React-Query",
       "react-hook-form",
-      'yup',
-      'Jest'
+      "yup",
+      "Jest",
     ],
     responsibilities:
-      "In this project, I played a key role in developing user interfaces for both web and admin portals for a healthcare organization. I focused on creating visually appealing and intuitive designs, fostering effective communication with backend developers for system integration. Additionally, I was responsible for optimizing the site&apos;s performance. Site has 50k+ unique users per month.",
+      "In this project, I played a key role in developing user interfaces for both web and admin portals for a healthcare organization. I focused on creating visually appealing and intuitive designs, fostering effective communication with backend developers for system integration. Additionally, I was responsible for optimizing the site's performance. Site has 50k+ unique users per month.",
   },
   {
     id: 1,
