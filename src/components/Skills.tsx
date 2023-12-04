@@ -2,13 +2,18 @@
 
 import { useCursor } from "@/context/CursorProvider";
 import { skills } from "@/lib/skills";
+import Skill from "./Skill";
 
 export default function Skills() {
   const { setToDefault, setToSkills } = useCursor();
 
   return (
     <div className="flex-1 flex flex-col gap-2">
-      <p className="font-bold" onMouseEnter={setToSkills} onMouseLeave={setToDefault}>
+      <p
+        className="font-bold"
+        onMouseEnter={setToSkills}
+        onMouseLeave={setToDefault}
+      >
         My skills
       </p>
 
@@ -28,13 +33,7 @@ export default function Skills() {
               onMouseLeave={setToDefault}
             >
               {category.skillsList.map((skill) => (
-                <div key={skill} className="text-3xl">
-                  <div
-                    className={`mt-1 px-2 py-1 text-sm bg-primary/30 text-primary`}
-                  >
-                    {skill}
-                  </div>
-                </div>
+                <Skill key={skill} name={skill} />
               ))}
             </div>
           </div>

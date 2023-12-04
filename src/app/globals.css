@@ -50,7 +50,7 @@
 }
 
 * {
-  /* cursor: none; */
+  cursor: none;
 }
 
 body::-webkit-scrollbar {
@@ -60,7 +60,6 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow: hidden;
 }
 
 .hero::before, .hero::after {
@@ -88,4 +87,14 @@ body {
   fill: var(--primary);
   position: absolute;
   z-index: -1;
+}
+
+.experience::before {
+  content: '';
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left: -47px;
+  border-radius: 50%;
+  background-color: #FACC15;
 }

@@ -24,6 +24,11 @@ export default function About() {
         </p>
 
         <p onMouseEnter={setToText} onMouseLeave={setToDefault}>
+          I possess mentoring experience and have conducted interviews during my
+          employment.
+        </p>
+
+        <p onMouseEnter={setToText} onMouseLeave={setToDefault}>
           My goal is to continue making meaningful contributions, grow as a
           specialist, and tackle challenging problems to create valuable
           products.

@@ -20,15 +20,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </head>
       <body
         className={cn(
-          "flex flex-col min-h-screen bg-background grainy", roboto.className
+          "flex flex-col min-h-screen bg-background grainy",
+          roboto.className
         )}
       >
         <Providers>
           <Navbar />
           {children}
-          {/* <Cursor /> */}
+          <Cursor />
         </Providers>
       </body>
     </html>
