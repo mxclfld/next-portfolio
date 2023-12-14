@@ -10,7 +10,7 @@ export default function Background() {
       className="mt-40 sm:mt-0 flex flex-col justify-center min-h-screen lg:gap-4 w-full"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 1 }}
       variants={{
         visible: { opacity: 1 },
