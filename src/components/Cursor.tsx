@@ -57,19 +57,17 @@ export default function Cursor() {
     const handleMouseLeave = () => setIsVisible(false);
     document.body.addEventListener("mouseenter", handleMouseEnter);
     document.body.addEventListener("mouseleave", handleMouseLeave);
-    return () => {
-      document.body.removeEventListener("mouseenter", handleMouseEnter);
-      document.body.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
 
-  useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener("mousemove", mouseMove);
-    return () => window.removeEventListener("mousemove", mouseMove);
+    return () => {
+      document.body.removeEventListener("mouseenter", handleMouseEnter);
+      document.body.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("mousemove", mouseMove);
+    };
   }, []);
 
   return (
