@@ -4,13 +4,12 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 import Introduction from "./Introduction";
-import About from "./About";
 import Skills from './Skills';
 
 export default function HeroSection() {
   return (
     <section className="flex flex-col justify-center min-h-[95vh] lg:gap-4 w-full relative">
-      <div className="flex flex-col flex-initial gap-52 lg:gap-8 xl:gap-12 2xl:gap-20 lg:flex-row lg:justify-between lg:items-center">
+      <div className="flex flex-col flex-initial gap-52 sm:gap-8 xl:gap-12 2xl:gap-20 lg:flex-row lg:justify-between lg:items-center">
         <Introduction />
         <Skills />
       </div>

@@ -28,7 +28,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "flex flex-col min-h-screen bg-background grainy",
+          "flex flex-col min-h-screen bg-background",
           roboto.className
         )}
       >
