@@ -1,6 +1,7 @@
 import Background from "@/components/Background";
 import Experience from "@/components/Experience";
 import HeroSection from "@/components/HeroSection";
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <Background />
       <Experience />
+      <Projects />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import {
   CURSOR_TYPE_MAP,
   CursorType,
@@ -25,7 +25,7 @@ export default function Cursor() {
 
   const [isVisible, setIsVisible] = useState(false);
 
-  const variants = {
+  const variants: Variants = {
     default: {
       height: SIZE_MAP.default,
       width: SIZE_MAP.default,
