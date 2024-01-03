@@ -6,11 +6,16 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Project from "./Project";
 import { trpc } from "@/app/_trpc/client";
+import Link from "next/link";
+import { socials } from "@/lib/socials";
+import { useCursor } from "@/context/CursorProvider";
 
 export default function Projects() {
   const { data: projects, isLoading } = trpc.getProjectsWithImg.useQuery();
   const { data: projectWithoutImg } = trpc.getProjectsWithoutImg.useQuery();
-  console.log({ projects, projectWithoutImg })
+
+  const { setToDefault, setToLink } = useCursor();
+  console.log({ projects, projectWithoutImg });
 
   return (
     <motion.section
@@ -24,7 +29,7 @@ export default function Projects() {
         hidden: { opacity: 0 },
       }}
     >
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col items-center gap-20">
         <div className="self-center text-center font-bold text-5xl bg-primary text-black px-2">
           <Typewriter
             words={["PROJECTS"]}
@@ -41,6 +46,15 @@ export default function Projects() {
             projects &&
             projects.map((_) => <Project isCard key={_.title} project={_} />)}
         </div>
+        <Link
+          className="uppercase border border-primary py-3 px-6 w-fit"
+          target="_blank"
+          onMouseEnter={setToLink}
+          onMouseLeave={setToDefault}
+          href={socials.github?.link}
+        >
+          all projects
+        </Link>
       </div>
     </motion.section>
   );

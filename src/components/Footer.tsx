@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="mx-12 py-4 xl:mx-auto max-w-7xl">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 text-3xl w-fit">
-            {socials.map((social) => (
+            {Object.values(socials).map((social) => (
               <Link
                 className="text-primary"
                 key={social.label}

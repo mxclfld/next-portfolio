@@ -35,7 +35,7 @@ export default function Introduction() {
         </p>
       </div>
       <div className="flex mt-4 gap-2 text-3xl w-fit">
-        {socials.map((social) => (
+        {Object.values(socials).map((social) => (
           <Link key={social.label} href={social.link} target="_blank">
             <motion.div
               whileHover={{
