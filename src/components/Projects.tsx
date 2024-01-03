@@ -1,24 +1,17 @@
 "use client";
 
-import { ProjectType, projects } from "@/lib/projects";
+import { db } from "@/lib/prisma";
+
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Project from "./Project";
-
-type SortedProjectsType = {
-  withImg: ProjectType[],
-  withoutImg: ProjectType[],
-}
-
-const sortedProjects: SortedProjectsType = projects.reduce(
-  (acc, value) => {
-    if (value.img) return { ...acc, withImg: [...acc.withImg, value] };
-    return { ...acc, withoutImg: [...acc.withoutImg, value] };
-  },
-  { withImg: [], withoutImg: [] } as SortedProjectsType,
-);
+import { trpc } from "@/app/_trpc/client";
 
 export default function Projects() {
+  const { data: projects, isLoading } = trpc.getProjectsWithImg.useQuery();
+  const { data: projectWithoutImg } = trpc.getProjectsWithoutImg.useQuery();
+  console.log({ projects, projectWithoutImg })
+
   return (
     <motion.section
       className="mt-40 mb-40 sm:mt-0 flex flex-col justify-center min-h-screen lg:gap-4 w-full"
@@ -44,9 +37,9 @@ export default function Projects() {
           />
         </div>
         <div className="flex flex-row gap-10 flex-wrap justify-center">
-          {sortedProjects.withImg.map((_) => (
-            <Project isCard key={_.title} project={_} />
-          ))}
+          {!isLoading &&
+            projects &&
+            projects.map((_) => <Project isCard key={_.title} project={_} />)}
         </div>
       </div>
     </motion.section>

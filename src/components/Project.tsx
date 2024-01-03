@@ -28,11 +28,13 @@ export default function Project({ project, isCard = false }: ProjectProps) {
 
   const { setToDefault, setToSkills, setToLink } = useCursor();
 
-  const renderDate = (endDate: Date, startDate?: Date) => {
-    const end = format(endDate, "MMMM yyyy");
+  const renderDate = (endDate: string, startDate: string | null) => {
+    const end = format(new Date(endDate), "MMMM yyyy");
     return (
       <p className="text-primary">
-        {startDate ? `${format(startDate, "MMMM yyyy")} - ${end}` : end}
+        {startDate
+          ? `${format(new Date(startDate), "MMMM yyyy")} - ${end}`
+          : end}
       </p>
     );
   };
