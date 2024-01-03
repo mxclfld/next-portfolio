@@ -19,6 +19,10 @@ export const appRouter = router({
       },
     });
   }),
+
+  getSkills: publicProcedure.query(async () => {
+    return await db.skill.findMany();
+  }),
 });
 
 export type AppRouter = typeof appRouter;
