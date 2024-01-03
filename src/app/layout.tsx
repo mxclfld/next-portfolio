@@ -5,6 +5,7 @@ import Providers from "@/components/Providers";
 import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
 import cn from "@/lib/cn";
+import Footer from "@/components/Footer";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          <Footer />
           <Cursor />
         </Providers>
       </body>
