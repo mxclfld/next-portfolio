@@ -9,12 +9,11 @@ import { socials } from "@/lib/socials";
 
 export default function Footer() {
   const { setToLink, setToDefault } = useCursor();
-  const toTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <footer className="pb-2 border-t border-primary w-full backdrop-blur-md bg-black">
+    <footer className="pb-2 border-t border-primary w-full bg-black">
       <div className="mx-12 py-4 xl:mx-auto max-w-7xl">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col justify-center items-center gap-2 lg:gap-0 lg:flex-row lg:justify-between">
           <div className="flex gap-2 text-3xl w-fit">
             {Object.values(socials).map((social) => (
               <Link
@@ -39,7 +38,7 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <div className="text-white font-bold">
+          <div className="text-white font-bold text-center">
             Designed & developed by Diana Kosovan
           </div>
         </div>
