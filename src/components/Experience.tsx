@@ -18,7 +18,7 @@ export default function Experience() {
       }}
     >
       <div className="flex flex-col flex-initial gap-12 lg:gap-8 xl:gap-12 2xl:gap-20 lg:flex-row lg:justify-between lg:items-center">
-        <div className="w-full lg:w-1/4 self-start lg:text-end font-bold text-xl bg-primary text-black px-2 mix-blend-difference">
+        <div className="w-full lg:w-1/4 self-start lg:text-end font-bold text-xl bg-primary text-black px-2 z-10">
           <Typewriter
             words={["EXPERIENCE"]}
             loop

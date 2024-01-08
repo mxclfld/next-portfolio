@@ -60,10 +60,21 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  mix-blend-mode: normal;
+
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 3%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 3%) 1px, transparent 1px);
+
+  background-size: 100px 100px, 100px 100px;
 }
 
-.hero::before, .hero::after {
-  content: url('../../public/dots.svg');
+.hero::before,
+.hero::after {
+  content: url("../../public/dots.svg");
   fill: var(--primary);
   position: absolute;
   z-index: -1;
@@ -83,18 +94,18 @@ body {
 }
 
 .blob::before {
-  content: url('../../public/blob.svg');
+  content: url("../../public/blob.svg");
   fill: var(--primary);
   position: absolute;
   z-index: -1;
 }
 
 .experience::before {
-  content: '';
+  content: "";
   height: 12px;
   width: 12px;
   position: absolute;
   left: -47px;
   border-radius: 50%;
-  background-color: #FACC15;
+  background-color: #facc15;
 }

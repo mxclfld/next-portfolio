@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import {
   CURSOR_TYPE_MAP,
   CursorType,
@@ -25,7 +25,7 @@ export default function Cursor() {
 
   const [isVisible, setIsVisible] = useState(false);
 
-  const variants = {
+  const variants: Variants = {
     default: {
       height: SIZE_MAP.default,
       width: SIZE_MAP.default,
@@ -57,19 +57,17 @@ export default function Cursor() {
     const handleMouseLeave = () => setIsVisible(false);
     document.body.addEventListener("mouseenter", handleMouseEnter);
     document.body.addEventListener("mouseleave", handleMouseLeave);
-    return () => {
-      document.body.removeEventListener("mouseenter", handleMouseEnter);
-      document.body.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
 
-  useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener("mousemove", mouseMove);
-    return () => window.removeEventListener("mousemove", mouseMove);
+    return () => {
+      document.body.removeEventListener("mouseenter", handleMouseEnter);
+      document.body.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("mousemove", mouseMove);
+    };
   }, []);
 
   return (
