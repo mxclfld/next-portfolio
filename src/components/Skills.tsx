@@ -19,7 +19,7 @@ export default function Skills() {
       </p>
 
       <div className="flex flex-col gap-3">
-        {!isLoading &&
+        {!isLoading ? (
           skills &&
           skills.map((category) => (
             <div key={category.label} className="flex flex-col gap-1">
@@ -40,7 +40,12 @@ export default function Skills() {
                 ))}
               </div>
             </div>
-          ))}
+          ))
+        ) : (
+          <div>
+            <p>Just wait a little bit, loading skills section...</p>
+          </div>
+        )}
       </div>
     </div>
   );
