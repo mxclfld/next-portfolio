@@ -6,6 +6,7 @@ import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
 import cn from "@/lib/cn";
 import Footer from "@/components/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Cursor />
+          <Analytics />
         </Providers>
       </body>
     </html>
