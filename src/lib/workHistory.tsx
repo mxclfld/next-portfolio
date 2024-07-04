@@ -29,6 +29,25 @@ const Project = () => (
 
 export const workHistory: WorkHistoryType[] = [
   {
+    id: 3,
+    projectName: "SingPods",
+    startDate: "May 2024",
+    endDate: "Present",
+    companyName: "CGS-Team",
+    companyLink: "https://cgsteam.io/",
+    skills: [
+      "React",
+      "Next.js",
+      "Electron",
+      "SCSS",
+      "react-final-form",
+      "Nest.js",
+      "zustand",
+      "socket.io",
+    ],
+    responsibilities: "My responsibilities included integrating new features, fixing bugs, and optimizing performance to ensure seamless user experiences. I was maintaining both desktop and web applications. I also collaborated with design and marketing teams to implement custom branding and functionality for various events.",
+  },
+  {
     id: 2,
     projectName: "[NDA]",
     startDate: "June 2023",
